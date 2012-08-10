@@ -1,0 +1,17 @@
+default_attributes(
+  "git_config" => {
+        "user_name" => "your name",
+        "email" => "your@email.addr"
+    },
+
+    "alfred" => {
+        "sync_folder" => "/Users/joe/Dropbox/alfred-settings/",
+        "email" => "your@email.addr"
+        "key" => "alfred regkey here"
+    },
+
+    "one_password" => {
+        "name" => "your name",
+        "key" => "1password key"
+    },
+)

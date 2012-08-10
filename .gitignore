@@ -1,0 +1,6 @@
+.chef/backup/
+.chef/cache/
+.chef/checksums/
+config/*json
+Attic
+private_settings.rb
