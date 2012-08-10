@@ -87,6 +87,8 @@ TODO / Unfinished
 * Manage ssh and ssl keys? Perhaps using the `private_settings.rb` role.
 * convert `osx_settings` to use @jtimberman's LWRPs from his `mac_os_x` cookbook?
 * More support for various dotfiles I want to install.
+* Make this recipe multi-OS compatible. It would be neat to make this usable for
+  setting up Linux and Windows workstations too.
 
 
 Contributions and Thanks
