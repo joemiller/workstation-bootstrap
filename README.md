@@ -18,12 +18,17 @@ minimal effort.
 
 Using
 -----
+
+### Pre-reqs:
+
 - Install ‘Command Line Tools for OSX <version>’ from http://developer.apple.com/downloads
   (requires free apple ID login) for the C compiler. Homebrew will need this.
   Alternatively you can install XCode and then install the Command Line Tools
   package from within the XCode GUI.
 
 - Install Chef: `curl -L http://www.opscode.com/chef/install.sh | sudo bash`
+
+### Chef configs and roles
 
 - Copy `roles/private_settings.rb-example` to `roles/private_settings.rb` and
   edit to suit taste.
@@ -36,16 +41,21 @@ Using
   to keep these files to the minimum run_list and put the bulk of the data
   into a role.
 
+### GO !!!
+
 - Run chef using Rake!  `rake chef dna=my_config` would run chef-solo using the
   `config/myconfig.json` file. Default is `dna=laptop` if not specified.
 
-- Install other things that I have not included in this cookbook, such as:
+### Do non-chef things
+
+- Install other things not included in this cookbook, such as:
 
     * Any apps from the Mac App Store
     * SSH keys, SSL keys, etc.
+    * Configure FileVault
 
 
-A Note About Dropbox
+A note about Dropbox
 --------------------
 The `apps::dropbox` recipe will stop the Chef run after installing Dropbox
 if it detects that Dropbox is not yet configured. I do this because some of the
@@ -54,8 +64,16 @@ doesn't matter in your setup by setting the node attribute
 `node[:dropbox][:exit_if_not_configured]` to `false`.
 
 
-A note about settings
----------------------
+A note about Sublime Text 2 Settings
+------------------------------------
+I symlink my Sublime Text 2 settings directory to a Dropbox folder so that I
+can share settings and plugins across machines. This approach has worked
+surprisingly well for me, but if you don't want to do it, remove the
+`apps::sublime_text_settings` recipe from the `base` role.
+
+
+A note about OSX settings (aka "defaults")
+------------------------------------------
 OSX settings are applied from the `osx_settings` cookbook. This is a very basic
 setup and it simply executes `defaults`. I think this is a quick and simple way
 to handle settings and maps directly to various articles you'll find online.
