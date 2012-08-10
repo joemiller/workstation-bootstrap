@@ -7,8 +7,12 @@ has significant inspiration and code from Justin Timberman (@jtimberman)'s
 work in this area as well.
 
 It's fairly opionated but I tried to make it configurable too. Modify to suit
-your tastes.
+your tastes. Be sure to read the various notes below before running this
+unmodified on your mac!
 
+
+Chef
+----
 I use the Chef omnibus/universal installer.
 
 This is not a fully automated chef run. It may prompt you for things
@@ -62,6 +66,18 @@ if it detects that Dropbox is not yet configured. I do this because some of the
 other recipes depend on files in my Dropbox. You can disable this if it
 doesn't matter in your setup by setting the node attribute
 `node[:dropbox][:exit_if_not_configured]` to `false`.
+
+
+A note about Keyboard Shortcuts
+-------------------------------
+Keyboard shortcuts are pretty weird and cryptic to setup in OSX from the
+command line. My recommendation is to set yours up manually in
+System Preferences > Keyboard and then copy the resulting
+`~/Library/Preferences/com.apple.symbolichotkeys.plist` into `cookbooks/osx_settings/files`
+to distribute to your other macs.
+
+Warning! I have included my keyboard settings in this repo!! Delete or replace
+them before running if you don't like my bindings!!!
 
 
 A note about Sublime Text 2 Settings
