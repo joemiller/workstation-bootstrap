@@ -1,6 +1,5 @@
 .chef/backup/
 .chef/cache/
 .chef/checksums/
-config/*json
 Attic
-private_settings.rb
+roles/private_settings.rb
