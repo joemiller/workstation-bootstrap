@@ -21,5 +21,6 @@ include_recipe 'dmg'
 
 dmg_package 'Google Chrome' do
   dmg_name 'google_chrome'
-  source   'http://dl.google.com/chrome/mac/dev/GoogleChrome.dmg'
+  node[:chrome][:url]
+  # source   'http://dl.google.com/chrome/mac/dev/GoogleChrome.dmg'
 end
