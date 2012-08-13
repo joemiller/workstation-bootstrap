@@ -3,3 +3,4 @@
 .chef/checksums/
 Attic
 roles/private_settings.rb
+*.rdp

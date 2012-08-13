@@ -15,6 +15,8 @@ run_list %w[
   recipe[apps::istat_pro]
   recipe[apps::sublime_text]
   recipe[apps::sublime_text_settings]
+  recipe[apps::tunnelblick]
+  recipe[apps::cord]
 
   recipe[homebrew]
   recipe[homebrew::environment]

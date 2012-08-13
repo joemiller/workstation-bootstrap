@@ -96,6 +96,12 @@ to handle settings and maps directly to various articles you'll find online.
 I may move to using @jtimberman's LWRPs for handling these in the future.
 
 
+A note about CoRD (RDP) servers (*.rdp files)
+---------------------------------------------
+The `apps::cord` recipe will manage any *.rdp files in the
+`apps/files/cord/Servers` directory by copying them into `~/Library/Application Support/CoRD/Servers/`.
+
+
 TODO / Unfinished
 -----------------
 * The `expandrive` recipe does not currently install a license if you have one.
@@ -105,6 +111,7 @@ TODO / Unfinished
 * More support for various dotfiles I want to install.
 * Make this recipe multi-OS compatible. It would be neat to make this usable for
   setting up Linux and Windows workstations too.
+* Setup tunneblick vpn's
 
 
 Contributions and Thanks
