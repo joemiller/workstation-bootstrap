@@ -17,6 +17,7 @@ run_list %w[
   recipe[apps::sublime_text_settings]
   recipe[apps::tunnelblick]
   recipe[apps::cord]
+  recipe[apps::keepassx]
 
   recipe[homebrew]
   recipe[homebrew::environment]
