@@ -59,6 +59,7 @@ default_attributes({
       s3cmd
       tmux
       unrar
+      watch
     ]
   }
 })
