@@ -60,6 +60,7 @@ default_attributes({
       tmux
       unrar
       watch
+      bash-completion
     ]
   }
 })
