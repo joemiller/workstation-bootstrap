@@ -24,6 +24,9 @@ run_list %w[
   recipe[homebrew::taps]
   recipe[homebrew::packages]
 
+  recipe[rvm]
+  recipe[rvm::rubies]
+
   recipe[git_config]
 
   recipe[osx_settings]
@@ -61,6 +64,20 @@ default_attributes({
       unrar
       watch
       bash-completion
+      apple-gcc42
+      automake
+      autoconf
+    ],
+    # need the `homebrew/dupes` tap for `apple-gcc42`
+    "taps" => %w[
+      "homebrew/dupes"
+    ]
+  },
+
+  "rvm" => {
+    "rubies" => %w[
+      1.8.7
+      1.9.3
     ]
   }
 })
