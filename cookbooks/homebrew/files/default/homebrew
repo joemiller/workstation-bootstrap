@@ -19,8 +19,6 @@ have()
 }
 
 ### homebrew completion
-if [ -d /usr/local/etc/bash_completion.d ]; then
-   for rc in `find /usr/local/etc/bash_completion.d -type l -or -type f`; do
-     source $rc
-   done
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi

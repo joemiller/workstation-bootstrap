@@ -4,6 +4,8 @@ description "base role for workstation setup"
 run_list %w[
   role[private_settings]
 
+  recipe[bash]
+
   recipe[apps::dropbox]
   recipe[apps::chrome]
   recipe[apps::skype]

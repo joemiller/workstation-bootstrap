@@ -3,12 +3,5 @@
 ### any changes made here.
 ################################################################################
 
-### source the system profile
-if [ -e "/etc/profile" ]; then
-    source /etc/profile
-fi
-
-### source all the various stuff others have dropped in
-for rc in `ls ~/.bash.d`; do
-    source ~/.bash.d/$rc
-done
+# this will set the iterm2 tab name to 'local:<current directory>'
+PS1="$PS1$(echo -e '\033];local:`basename $PWD`\007')"
