@@ -4,4 +4,4 @@
 ################################################################################
 
 # this will set the iterm2 tab name to 'local:<current directory>'
-PS1="$PS1$(echo -e '\033];local:`basename $PWD`\007')"
+PS1="$PS1$(echo -e '\033];LOCAL:`basename $PWD`\007')"
