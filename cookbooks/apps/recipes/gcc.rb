@@ -24,3 +24,10 @@ homebrew_tap "homebrew/dupes"
 package "apple-gcc42"
 directory "#{ENV['HOME']}/.bash.d"
 cookbook_file "#{ENV['HOME']}/.bash.d/gcc"
+
+# symlink /usr/bin/gcc-4.2. Seems necessary for some rvm builds which
+# are hardcoded to /usr/bin
+execute "symlink_usrbin_gcc42" do
+  command "sudo ln -s /usr/local/bin/gcc-4.2 /usr/bin/gcc-4.2"
+  not_if { ::File.exists?('/usr/bin/gcc-4.2') }
+end
