@@ -31,6 +31,5 @@ directory "#{ENV['HOME']}/.bash.d"
 cookbook_file "#{ENV['HOME']}/.bash.d/README"
 cookbook_file "#{ENV['HOME']}/.bash.d/path"
 
-cookbook_file "#{ENV['HOME']}/.bash.d/prompt.bash" do
-  source "dot-prompt.bash"
-end
+cookbook_file "#{ENV['HOME']}/.bash.d/prompt.bash"
+cookbook_file "#{ENV['HOME']}/.bash.d/jconsole.bash"
