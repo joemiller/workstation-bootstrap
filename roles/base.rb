@@ -20,6 +20,7 @@ run_list %w[
   recipe[apps::tunnelblick]
   recipe[apps::cord]
   recipe[apps::keepassx]
+  recipe[apps::chicken]
 
   recipe[homebrew]
   recipe[homebrew::environment]
