@@ -28,7 +28,7 @@ run_list %w[
   recipe[rvm]
   recipe[rvm::rubies]
 
-  recipe[git_config]
+  recipe[dotfiles]
 
   recipe[osx_settings]
   recipe[osx_settings::keyboard_shortcuts]
