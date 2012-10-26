@@ -22,5 +22,6 @@ link "/usr/local/etc/bash_completion.d/homebrew" do
   to "/usr/local/Library/Contributions/brew_bash_completion.sh"
 end
 
-directory "#{ENV['HOME']}/.bash.d"
-cookbook_file "#{ENV['HOME']}/.bash.d/homebrew"
+## this dotfile is actually handled by the dotfiles recipe + repo now
+# directory "#{ENV['HOME']}/.bash.d"
+# cookbook_file "#{ENV['HOME']}/.bash.d/homebrew"
