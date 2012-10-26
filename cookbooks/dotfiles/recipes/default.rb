@@ -1,6 +1,9 @@
 # this cookbook does not actually manage dotfiles. instead it downloads
 # my dotfile git repo and runs the idempotent install script contained within
 # it
+#
+# See: https://github.com/joemiller/dotfiles
+#
 
 dotfile_dir = "#{ENV['HOME']}/.dotfiles"
 
