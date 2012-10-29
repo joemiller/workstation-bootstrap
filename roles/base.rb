@@ -19,6 +19,7 @@ run_list %w[
   recipe[apps::cord]
   recipe[apps::keepassx]
   recipe[apps::chicken]
+  recipe[apps::xquartz]
 
   recipe[homebrew]
   recipe[homebrew::environment]
