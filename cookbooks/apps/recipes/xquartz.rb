@@ -9,4 +9,5 @@ dmg_package 'XQuartz' do
   volumes_dir "XQuartz-#{node[:xquartz][:version]}"
   source      node[:xquartz][:url]
   checksum    node[:xquartz][:checksum]
+  not_if { ::File.exists?('/Applications/Utilities/XQuartz.app/') }
 end
