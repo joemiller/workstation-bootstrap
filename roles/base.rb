@@ -52,6 +52,7 @@ default_attributes({
 
   "homebrew" => {
     "packages" => %w[
+      wget
       git-flow
       mysql
       redis
