@@ -20,6 +20,7 @@ run_list %w[
   recipe[apps::keepassx]
   recipe[apps::chicken]
   recipe[apps::xquartz]
+  recipe[apps::picasa]
 
   recipe[homebrew]
   recipe[homebrew::environment]
