@@ -21,6 +21,7 @@ run_list %w[
   recipe[apps::chicken]
   recipe[apps::xquartz]
   recipe[apps::picasa]
+  recipe[apps::picasa_settings]
 
   recipe[homebrew]
   recipe[homebrew::environment]
