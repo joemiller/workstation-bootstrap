@@ -14,4 +14,12 @@ default_attributes(
         "name" => "your name",
         "key" => "1password key"
     },
+
+    "expandrive" => {
+        "license_file" => "com.expandrive.ExpanDrive2.plist"
+    },
+
+    "sublime_text" => {
+        "license" => "----- BEGIN LICENSE -----\n...\n------ END LICENSE ------"
+    }
 )
