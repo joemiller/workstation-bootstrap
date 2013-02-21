@@ -46,8 +46,8 @@ default_attributes({
 
   "one_password" => {
     # better to put name and key in the 'private_settings.rb' role
-    # "name": "Some Guy",
-    # "key": "LIC-EN-SE",
+    # "name" => "Some Guy",
+    # "key" => "LIC-EN-SE",
     "version" => "3.8.12",
     "checksum" => "9e7ad33a876ce9a5d1a63438d95619ca0e3240af"
   },
@@ -72,6 +72,7 @@ default_attributes({
       apple-gcc42
       automake
       autoconf
+      openconnect
     ],
     # need the `homebrew/dupes` tap for `apple-gcc42`
     "taps" => %w[
