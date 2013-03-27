@@ -39,6 +39,10 @@ run_list %w[
 
 default_attributes({
 
+  "cord" => {
+    "saved_servers_folder" => File.expand_path("~/Dropbox/CORD/Servers")
+  },
+
   "iterm2" => {
     "version" => "-1_0_0_20120726",
     "checksum" => "19538b6be5cb6f97e34aa729983a90ebc7a0e7ea"

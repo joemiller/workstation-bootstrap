@@ -11,7 +11,11 @@ execute "unzip cord" do
   not_if { ::File.directory? File.expand_path("/Applications/CoRD.app") }
 end
 
-# sync your cord *.rdp files!
-remote_directory File.expand_path("~/Library/Application Support/CoRD/Servers") do
-  source "cord/Servers"
+# store server (*.rdp) on a shared folder like Dropbox
+if node.cord.attribute?('saved_servers_folder')
+  mac_os_x_userdefaults 'savedServersPath' do
+    domain 'net.sf.cord'
+    key name
+    value node.cord.saved_servers_folder
+  end
 end
