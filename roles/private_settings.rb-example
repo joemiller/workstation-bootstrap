@@ -5,7 +5,7 @@ default_attributes(
     },
 
     "alfred" => {
-        "sync_folder" => "/Users/joe/Dropbox/alfred-settings/",
+        "sync_folder" => File.expand_path("~/Dropbox/alfred-settings/"),
         "email" => "your@email.addr"
         "key" => "alfred regkey here"
     },
