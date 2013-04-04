@@ -1,4 +1,4 @@
 default.picasa.dmg_name = 'picasamac39.dmg'
-default.picasa.version = '3.9.13'
+default.picasa.version = '3.9.16'
 default.picasa.url = 'http://dl.google.com/photos/picasamac39.dmg'
-default.picasa.checksum = '595cc3ac95f89ea9746fe8a1d4e0b4914f02880d8eda201bd7466faa8a733643'
+default.picasa.checksum = '05e3b74232c6e7c8402ca248049a816927be319045dd3e82964756f643082735'
