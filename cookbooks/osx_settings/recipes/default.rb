@@ -76,4 +76,7 @@ execute "defaults write com.apple.dock dashboard-in-overlay -bool true"
 execute "defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode -string TwoButton"
 
 # Set TimeMachine backup frequency to 4 hours instead of 1 hour (value is in secs)
+## mac osx < 10.8
 execute "sudo defaults write /System/Library/LaunchDaemons/com.apple.backupd-auto StartInterval -int 14400"
+## mac odx >= 10.8
+execute 'sudo defaults write /System/Library/LaunchDaemons/com.apple.backupd-auto LaunchEvents "{com.apple.time={\"Backup Interval\"={Interval=14400; MaintenanceWakeBehavior=Once;};};}"'
