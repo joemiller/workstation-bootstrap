@@ -24,3 +24,13 @@ dmg_package 'Google Chrome' do
   node[:chrome][:url]
   # source   'http://dl.google.com/chrome/mac/dev/GoogleChrome.dmg'
 end
+
+# @TODO(joe): incorporate these into chef execution
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array-add -string '{"pattern":"https://[*.]panth.io:[*.]","filter":{"ISSUER":{"CN":"internal.getpantheon.com"}}}'
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array-add -string '{"pattern":"https://[*.]panth.io:8090","filter":{"ISSUER":{"CN":"internal.getpantheon.com"}}}'
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array-add -string '{"pattern":"https://[*.]dashboard.getpantheon.com","filter":{"ISSUER":{"CN":"internal.getpantheon.com"}}}'
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array-add -string '{"pattern":"https://[*.]metrics.getpantheon.com","filter":{"ISSUER":{"CN":"internal.getpantheon.com"}}}'
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array-add -string '{"pattern":"https://[*.]logs.getpantheon.com","filter":{"ISSUER":{"CN":"internal.getpantheon.com"}}}'
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array-add -string '{"pattern":"https://[*.]live.getpantheon.com","filter":{"ISSUER":{"CN":"internal.getpantheon.com"}}}'
+# defaults write com.google.Chrome AutoSelectCertificateForUrls -array-add -string '{"pattern":"https://[*.]sensu.getpantheon.com","filter":{"ISSUER":{"CN":"internal.getpantheon.com"}}}'
