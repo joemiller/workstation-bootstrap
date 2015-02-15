@@ -77,6 +77,11 @@ default_attributes({
       automake
       autoconf
       openconnect
+      gist
+      jq
+      pigz
+      fswatch
+      pstree
     ],
     # need the `homebrew/dupes` tap for `apple-gcc42`
     "taps" => %w[
