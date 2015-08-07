@@ -80,3 +80,9 @@ execute "defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseBut
 execute "sudo defaults write /System/Library/LaunchDaemons/com.apple.backupd-auto StartInterval -int 14400"
 ## mac odx >= 10.8
 execute 'sudo defaults write /System/Library/LaunchDaemons/com.apple.backupd-auto LaunchEvents "{com.apple.time={\"Backup Interval\"={Interval=14400; MaintenanceWakeBehavior=Once;};};}"'
+
+## speed up fullsize screen animation: http://osxdaily.com/2015/01/06/make-the-window-resizing-animation-speed-instant-in-mac-os-x/ 
+execute 'defaults write -g NSWindowResizeTime -float 0.003'
+
+## speed up mission-control/expose window animations: http://www.cultofmac.com/148802/change-the-speed-of-animations-in-mission-control-video-how-to/ 
+execute 'defaults write com.apple.dock expose-animation-duration -float 0.10'
